@@ -13827,14 +13827,16 @@ mean of x mean of y
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="n">x</span> <span class="o">&lt;-</span> <span class="nf">wygeneruj_dane</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">31</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">sparowany</span> <span class="o">&lt;-</span> <span class="bp">T</span> <span class="c1"># CZY SPAROWANY</span>
+
+<span class="n">x</span> <span class="o">&lt;-</span> <span class="nf">wygeneruj_dane</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">31</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">&lt;-</span> <span class="nf">wygeneruj_dane</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">31</span><span class="p">)</span>
 
 <span class="n">poziom_istotnosci</span> <span class="o">&lt;-</span> <span class="m">0.01</span>
-<span class="n">sparowany</span> <span class="o">&lt;-</span> <span class="bp">T</span> <span class="c1">#CZY SPAROWANY</span>
+
 
 
 <span class="c1">#sprawdzenie zalozen CLT</span>
@@ -13883,60 +13885,11 @@ mean of x mean of y
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[1] &#34;Zalozenia CTL spelnione (n1 &gt; 30 i n2 &gt; 30)&#34;
-
-
-----------------
-Test obustronny
-
-	Paired t-test
-
-data:  x and y
-t = -5.5678, df = 30, p-value = 4.691e-06
-alternative hypothesis: true difference in means is not equal to 0
-99 percent confidence interval:
- -1.4939138 -0.5060862
-sample estimates:
-mean of the differences 
-                     -1 
-
-Wartosc statystyki testowej: -5.56776436283002 
-p-wartosc mniejsza od poziomu istotnosci. Odrzucamy H0
-
-----------------
-Test lewostronny
-
-	Paired t-test
-
-data:  x and y
-t = -5.5678, df = 30, p-value = 2.346e-06
-alternative hypothesis: true difference in means is less than 0
-99 percent confidence interval:
-       -Inf -0.5586628
-sample estimates:
-mean of the differences 
-                     -1 
-
-Wartosc statystyki testowej: -5.56776436283002 
-p-wartosc mniejsza od poziomu istotnosci. Odrzucamy H0
-
-----------------
-Test prawostronny
-
-	Paired t-test
-
-data:  x and y
-t = -5.5678, df = 30, p-value = 1
-alternative hypothesis: true difference in means is greater than 0
-99 percent confidence interval:
- -1.441337       Inf
-sample estimates:
-mean of the differences 
-                     -1 
-
-Wartosc statystyki testowej: -5.56776436283002 
-p-wartosc wieksza od poziomu istotnosci. Brak podstaw do odrzucenia H0</pre>
+<div class="output_subarea output_text output_error">
+<pre>
+Error in wygeneruj_dane(1, 1, 31): could not find function &#34;wygeneruj_dane&#34;
+Traceback:
+</pre>
 </div>
 </div>
 
@@ -13947,13 +13900,15 @@ p-wartosc wieksza od poziomu istotnosci. Brak podstaw do odrzucenia H0</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Regresja-liniowa">Regresja liniowa<a class="anchor-link" href="#Regresja-liniowa">&#182;</a></h1><h2 id="Za&#322;o&#380;enia">Za&#322;o&#380;enia<a class="anchor-link" href="#Za&#322;o&#380;enia">&#182;</a></h2><h3 id="Twierdzenia">Twierdzenia<a class="anchor-link" href="#Twierdzenia">&#182;</a></h3><p><img src="images/reg_tw1.PNG" alt="">
+<h1 id="Regresja-liniowa">Regresja liniowa<a class="anchor-link" href="#Regresja-liniowa">&#182;</a></h1><h2 id="Za&#322;o&#380;enia">Za&#322;o&#380;enia<a class="anchor-link" href="#Za&#322;o&#380;enia">&#182;</a></h2><p><img src="images/zal_reg_lin.PNG" alt=""></p>
+<h3 id="Twierdzenia">Twierdzenia<a class="anchor-link" href="#Twierdzenia">&#182;</a></h3><p><img src="images/reg_tw1.PNG" alt="">
 <img src="images/reg_tw2.PNG" alt="">
 <img src="images/reg_tw3.PNG" alt=""></p>
 <h3 id="Reszta">Reszta<a class="anchor-link" href="#Reszta">&#182;</a></h3><p><img src="images/reszta.PNG" alt=""></p>
 <h3 id="SSE">SSE<a class="anchor-link" href="#SSE">&#182;</a></h3><p><img src="images/SSE.PNG" alt=""></p>
 <h3 id="SSR">SSR<a class="anchor-link" href="#SSR">&#182;</a></h3><p><img src="images/SSR.PNG" alt=""></p>
-<h3 id="SST">SST<a class="anchor-link" href="#SST">&#182;</a></h3><p><img src="images/SST.PNG" alt=""></p>
+<h3 id="SST">SST<a class="anchor-link" href="#SST">&#182;</a></h3><p><img src="images/SST.PNG" alt="">
+<img src="images/sst_ssr_sse.PNG" alt=""></p>
 <h3 id="RMS">RMS<a class="anchor-link" href="#RMS">&#182;</a></h3><p><img src="images/RMS.PNG" alt="">
 <img src="images/RMS_NIEOBCIAZONE.PNG" alt=""></p>
 <h3 id="Wsp&#243;&#322;czynnik-determinacji">Wsp&#243;&#322;czynnik determinacji<a class="anchor-link" href="#Wsp&#243;&#322;czynnik-determinacji">&#182;</a></h3><p><img src="images/wsp_det.PNG" alt=""></p>
